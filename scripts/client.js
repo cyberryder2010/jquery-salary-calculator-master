@@ -5,6 +5,7 @@ const employeeList = [];
 function init() {
   // create events to listen for
   $(".js-empInfo-form").on("submit", submitEmpInfo);
+  $(".js-table-body").on("click", ".js-btn-delete", delEmployee);
 }
 
 function submitEmpInfo(event) {
@@ -22,11 +23,11 @@ function submitEmpInfo(event) {
   console.log("List of Employees", employeeList);
   render();
 }
-
 function render() {
   $(".js-table-body").empty();
   for (let i = 0; i < employeeList.length; i++) {
     const individualEmp = employeeList[i];
+    totalMonthlySalary = individualEmp.AnnSalary / 12;
 
     $(".js-table-body").append(`<tr>
         <td>${individualEmp.First}</td>
@@ -34,8 +35,17 @@ function render() {
         <td>${individualEmp.Id}</td>
         <td>${individualEmp.JobTitle}</td>
         <td>${individualEmp.AnnSalary}</td>
+        <td><button class='js-btn-delete'>Delete</button></td>
     </tr>`);
   }
-  //calculate  monthly salary per employee
-  //add monthly salary for all employees
+  //total monthly salary for all employees
+  $(".js-total-monthly-salary").text(`$${totalMonthlySalary}`);
+  console.log("Total", totalMonthlySalary);
+}
+function delEmployee() {
+  console.log("Delete", this);
+  $(this)
+    .parent()
+    .parent()
+    .remove();
 }
