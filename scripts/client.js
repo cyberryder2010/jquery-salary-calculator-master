@@ -23,6 +23,7 @@ function submitEmpInfo(event) {
   console.log("List of Employees", employeeList);
   render();
 }
+
 function render() {
   $(".js-table-body").empty();
   let totalMonthlySalary = 0;
@@ -41,14 +42,14 @@ function render() {
     </tr>`);
   }
   //total monthly salary for all employees
-  $(".js-total-monthly-salary").text(`$${totalMonthlySalary}`);
-
+  $(".js-total-monthly-salary").text(`$${totalMonthlySalary.toFixed(2)}`);
+  // conditional monthly salary over 20k should be red
+  if (totalMonthlySalary >= 20000) {
+    console.log("Yeah this works!!!");
+    $(".js-total-monthly-salary").css("background-color", "red");
+  }
   console.log("Total", totalMonthlySalary);
   //FIXME: delete does not remove salary from total when employee is removed
-}
-
-if (".js-total-monthly-salary" >= 20000) {
-  HTML.style.backgroundColor = red;
 }
 
 function delEmployee() {
