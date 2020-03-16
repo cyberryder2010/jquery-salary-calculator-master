@@ -14,9 +14,10 @@
     <h1>Total Monthly Salary</h1>
   </header>
   <body>
+    <main class='container'>
     <h2>Employee Information</h2>
     <form class="js-empInfo-form">
-      <div>
+    
         <label>First Name:
       <input
         class="js-input-fName"
@@ -25,9 +26,7 @@
         id="fNameInput"
         name="fName"
       />
-    </label>
-    </div>
-    <div>
+        </label>
       <label>Last Name:
       <input
         class="js-input-lname"
@@ -37,8 +36,6 @@
         name="lName"
       />
     </label>
-    </div>
-    <div>
       <label>ID Number:
       <input
         class="js-input-idNum"
@@ -47,9 +44,6 @@
         id="idNumInput"
         name="idNum"
       />
-    </label>
-    </div>
-    <div>
       <label>Job Title:
       <input
         class="js-input-jobTitle"
@@ -58,9 +52,7 @@
         id="jobTitleInput"
         name="jobTitle"
       />
-    </div>
   </label>
-  <div>
     <label>Annual Salary:
       $<input
         class="js-input-annSalary"
@@ -70,7 +62,6 @@
         name="annualSalary"
       />
     </label>
-    </div>
       <button class="js-submit-empInfo" id="empInfoButton">Submit</button>
     </form>
 
@@ -110,5 +101,6 @@
       </tbody>
     </table>
     <div>Total Monthly Salary: <span class="js-total-monthly-salary">0.00</span></div>
+  </main>
   </body>
 </html>

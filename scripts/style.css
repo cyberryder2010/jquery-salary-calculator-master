@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+header {
+  background-color: rgb(65, 68, 225);
+  color: whitesmoke;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.8);
+}
+
+h1,
+h2,
+h3 {
+  margin: 30px 10px 20px 10px;
+}
+
+form {
+  font-size: 20px;
+}
+.container {
+  padding: 20px;
+}
+
+.js-submit-empInfo {
+  background-color: slateblue;
+  color: whitesmoke;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  box-shadow: -1px 0px 1px #6fadcb, 0px 1px 1px #54809d, -2px 1px 1px #6fadcb,
+    -1px 2px 1px #54809d, -3px 2px 1px #6fadcb, -2px 3px 1px #54809d;
+
+  -6px7px0rgba(0, 0, 0, 0.5),-5px8px0rgba(0, 0, 0, 0.5),-3px9px0rgba(0, 0, 0, 0.5),inset04px5px -2px rgba(255, 255, 255, 0.5),
+    inset 0 1px 0 0 rgba(0, 0, 0, 0.3),
+
+    background: linear-gradient(
+    #a2d3e9,
+    #7abedf
+  );
+}
+
+.js-btn-delete {
+  background-color: slateblue;
+  color: whitesmoke;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background-color: slateblue;
+  color: whitesmoke;
+}
+td {
+  border: 1px solid black;
+}

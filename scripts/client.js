@@ -25,9 +25,11 @@ function submitEmpInfo(event) {
 }
 function render() {
   $(".js-table-body").empty();
+  let totalMonthlySalary = 0;
+
   for (let i = 0; i < employeeList.length; i++) {
     const individualEmp = employeeList[i];
-    totalMonthlySalary = individualEmp.AnnSalary / 12;
+    totalMonthlySalary += individualEmp.AnnSalary / 12;
 
     $(".js-table-body").append(`<tr>
         <td>${individualEmp.First}</td>
@@ -40,8 +42,15 @@ function render() {
   }
   //total monthly salary for all employees
   $(".js-total-monthly-salary").text(`$${totalMonthlySalary}`);
+
   console.log("Total", totalMonthlySalary);
+  //FIXME: delete does not remove salary from total when employee is removed
 }
+
+if (".js-total-monthly-salary" >= 20000) {
+  HTML.style.backgroundColor = red;
+}
+
 function delEmployee() {
   console.log("Delete", this);
   $(this)
